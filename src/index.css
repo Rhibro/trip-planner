@@ -1,6 +1,6 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  /* line-height: 1.5; */
   font-weight: 400;
 
   color-scheme: light dark;
@@ -28,6 +28,13 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 h1 {
@@ -58,7 +65,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -69,11 +76,12 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
 
 /* Form Styles */
 
 form {
+  min-width: 20rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -93,14 +101,58 @@ h2 {
 label {
   color: black;
   font-weight: 600;
+  padding: .5rem;
 }
 
 input {
   background-color: #97ade6;
   border-radius: 5px;
   border: solid 1px black;
+  color: black;
 }
 
 input:hover {
   background-color: #7EA0F6;
+}
+
+/* List styles */
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+/* List item styles */
+
+li {
+  border: solid black 1px;
+  border-radius: 20px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  margin: 1rem;
+  width: 200px;
+  height: auto;
+  padding: .5rem; 
+  list-style-type: none;
+}
+
+h3 {
+  color: black;
+}
+
+h4 {
+  color: black;
+}
+
+p {
+  color: black;
+}
+
+.deleteBtn {
+  font-weight: 400;
+  padding: .3rem;
 }
