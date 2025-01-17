@@ -8,9 +8,12 @@
 
  ## Project Features 
  - user is able to write in a form 
-        - name: (what they wish to name the trip i.e Weekend hike)
-        - dates: (how long the trip will be i.e jul 2-4)
-        - location: (where the trip will take place i.e Spain)
+
+   - name: (what they wish to name the trip i.e Weekend hike)
+        
+   - dates: (how long the trip will be i.e jul 2-4)
+        
+   - location: (where the trip will take place i.e Spain)
 
 - once the user has entered information in all the available fields they can click the sumbit button
 
@@ -22,4 +25,9 @@
 
  ## Figma design
 
+ https://www.figma.com/design/fCCvWAhkVEAq9980ws9Kwb/Trip-Planner?node-id=0-1&p=f&t=K2anK5LDCYwSJX0p-0
+
  ## Screen Shot
+
+ <img width="798" alt="trip-planner-pic" src="https://github.com/user-attachments/assets/b91ed19b-cac1-4263-aeda-d35d47893c07" />
+
