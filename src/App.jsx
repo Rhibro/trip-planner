@@ -2,13 +2,18 @@ import './App.css'
 import Header from './components/Header'
 import ActivityForm from './components/ActivityForm'
 import ActivityList from './components/ActivityList'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import RotatingBackground from './components/RotatingBackground'
+
 
 function App() {
   const [activities, setActivities] = useState(() => {
     // loads activities from local storage 
     const savedActivities = localStorage.getItem('activities');
-    return savedActivities ? JSON.parse(savedActivities) : [];
+    return savedActivities ? JSON.parse(savedActivities).map(activity => ({
+      ...activity,
+      dates: new Date(activity.dates) // Convert string back to Date object
+    })) : [];
   });
 
   const addActivity = (activity) => {
@@ -25,13 +30,16 @@ function App() {
 
   return (
     <>
-      <Header />
-      <main>
-        <ActivityForm addActivity={addActivity} />
-        <ActivityList activities={activities} deleteActivity={deleteActivity} />
-      </main>
+      <RotatingBackground>
+        <Header />
+      </RotatingBackground>
+        <main>
+          <ActivityForm addActivity={addActivity} />
+          <ActivityList activities={activities} deleteActivity={deleteActivity} />
+        </main>
+      
     </>
-  )
+  );
 }
 
 export default App
