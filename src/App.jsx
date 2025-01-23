@@ -2,7 +2,7 @@ import './App.css'
 import Header from './components/Header'
 import ActivityForm from './components/ActivityForm'
 import ActivityList from './components/ActivityList'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import RotatingBackground from './components/RotatingBackground'
 
 
