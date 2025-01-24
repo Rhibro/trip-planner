@@ -23,10 +23,7 @@ body {
 }
 
 .backgroundContainer {
-  /* position: relative; */
   width: 100%;
-  /* Full height */
-  /* overflow: hidden; */
 }
 
 .backgroundImg {
@@ -48,6 +45,14 @@ body {
 
 .fade-out {
   opacity: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  align-items: center;
+  flex-direction: column;
 }
 
 a {
@@ -193,4 +198,20 @@ p {
 .deleteBtn {
   font-weight: 400;
   padding: .3rem;
+}
+
+/* weather styles */
+
+.weatherBox {
+  background-color: white;
+  border-radius: 5%;
+  border: 1px solid black;
+  max-width: 200px;
+  padding: 1rem;
+}
+
+.weatherSection {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
 }

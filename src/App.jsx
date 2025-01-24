@@ -4,6 +4,7 @@ import ActivityForm from './components/ActivityForm'
 import ActivityList from './components/ActivityList'
 import { useState } from 'react'
 import RotatingBackground from './components/RotatingBackground'
+import WeatherAPI from './components/WeatherAPI';
 
 
 function App() {
@@ -31,7 +32,12 @@ function App() {
   return (
     <>
       <RotatingBackground>
-        <Header />
+        <header>
+          <div className='weatherSection'>
+            <WeatherAPI />
+          </div>
+          <Header />
+        </header>
       </RotatingBackground>
         <main>
           <ActivityForm addActivity={addActivity} />
