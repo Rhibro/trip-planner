@@ -29,6 +29,15 @@ function App() {
     localStorage.setItem('activities', JSON.stringify(updatedActivities)); // Save to local storage
   };
 
+  const editActivity = (index, updatedActivity) => {
+    const updatedActivities = activities.map((activity, i) =>
+      i === index ? { ...updatedActivity, dates: new Date(updatedActivity.dates) } : activity
+    );
+    setActivities(updatedActivities);
+    localStorage.setItem('activities', JSON.stringify(updatedActivities)); // Save to local storage
+  };
+  
+
   return (
     <>
       <RotatingBackground>
@@ -41,7 +50,7 @@ function App() {
       </RotatingBackground>
         <main>
           <ActivityForm addActivity={addActivity} />
-          <ActivityList activities={activities} deleteActivity={deleteActivity} />
+          <ActivityList activities={activities} deleteActivity={deleteActivity} editActivity={editActivity}/>
         </main>
       
     </>

@@ -18,6 +18,7 @@ export default function WeatherAPI() {
             }
             const data = await response.json();
             setWeatherData(data);
+            setError(null);
         } catch (err) {
             setError(err.message);
         } finally {
@@ -48,6 +49,11 @@ export default function WeatherAPI() {
 
     return (
         <div>
+            {loading && (
+                <div>
+                    <p>Fetching your location...</p>
+                </div>
+            )}
             {error && <p style={{ color: "red" }}>{error}</p>}
             {weatherData && (
                 <div className="weatherBox">

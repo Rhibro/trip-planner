@@ -198,6 +198,7 @@ p {
 .deleteBtn {
   font-weight: 400;
   padding: .3rem;
+  margin: .5rem;
 }
 
 /* weather styles */

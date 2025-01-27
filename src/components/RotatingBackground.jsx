@@ -15,7 +15,7 @@ const RotatingBackground  = ({children}) => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 10000); // Change image every 5 seconds
+        }, 10000); // Change image every 10 seconds
 
         return () => clearTimeout(timer); // Cleanup on unmount
     }, [currentIndex, images.length]); // Depend on currentIndex

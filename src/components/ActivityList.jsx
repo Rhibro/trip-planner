@@ -1,6 +1,6 @@
 import ActivityItem from './ActivityItem';
 
-export default function ActivityList({activities, deleteActivity}) {
+export default function ActivityList({activities, deleteActivity, editActivity}) {
     return (
         <ul>
             {activities.map((activity, index) => (
@@ -10,6 +10,7 @@ export default function ActivityList({activities, deleteActivity}) {
                         dates={activity.dates} 
                         location={activity.location} 
                         onDelete={() => deleteActivity(index)}
+                        onEdit={(updatedActivity) => editActivity(index, updatedActivity)} // Pass edit callback
                     />
                 </li>
             ))}
