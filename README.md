@@ -11,7 +11,7 @@
 
    - name: (what they wish to name the trip i.e Weekend hike)
         
-   - dates: (how long the trip will be i.e jul 2-4)
+   - date: (the date the trip begins i.e 02/07/2025)
         
    - location: (where the trip will take place i.e Spain)
 
@@ -21,6 +21,8 @@
 
 - the user also has the option to delete trip information, by clicking the delete button on the list item
 
+- the use has the option to edit the list item by clicking the edit button and either cancelling the edit or saving the edit
+
 - if you reload the page the lists items do not disappear thanks to local storage
 
  ## Figma design
@@ -28,8 +30,8 @@
  https://www.figma.com/design/fCCvWAhkVEAq9980ws9Kwb/Trip-Planner?node-id=0-1&p=f&t=K2anK5LDCYwSJX0p-0
 
  ## Screen Shot
-
- <img width="798" alt="trip-planner-pic" src="https://github.com/user-attachments/assets/b91ed19b-cac1-4263-aeda-d35d47893c07" />
+ 
+<img width="799" alt="trip-planner-updated-pic" src="https://github.com/user-attachments/assets/c97a3e00-513d-4dd8-a5f9-1cd795b5c469" />
 
 ## How it works
 
@@ -75,9 +77,17 @@
   - props: 
     - tripName, dates, location: Properties of an activity passed from ActivityList.
     - onDelete: A function to delete the specific activity.
+    - onEdit: a function which allows you to edit the activity item
   
   - Displays the trip name, dates, and location in a structured format.
-  - Includes a delete button that calls the onDelete function when clicked 
+  - Includes a delete button that calls the onDelete function when clicked
+
+### WeatherAPI.jsx
+ - using useEffect and useSate to call a weather API
+ - if the user allows to share their location they get a weather forecast at the top left of their screen
+
+### RotatingBackground.jsx
+ - useing useState, useEffect and setTimeout to rotate through an index (array) of images for the hero image
 
 ### Application Flow:
 
