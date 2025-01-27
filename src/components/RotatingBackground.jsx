@@ -3,14 +3,14 @@ import imageOne from '../assets/beach-trip.jpg';
 import imageThree from '../assets/old-trip.jpg';
 import imageFour from '../assets/ski-trip.jpg';
 
+const [currentIndex, setCurrentIndex] = useState(0);
+
 const RotatingBackground  = ({children}) => {
     const images = [
         `url(${imageOne})`,
         `url(${imageThree})`,
         `url(${imageFour})`,
     ];
-
-    const [currentIndex, setCurrentIndex] = useState(0);
   
     useEffect(() => {
         const timer = setTimeout(() => {
