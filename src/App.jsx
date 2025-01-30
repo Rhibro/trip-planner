@@ -1,10 +1,11 @@
-import './App.css'
-import Header from './components/Header'
-import ActivityForm from './components/ActivityForm'
-import ActivityList from './components/ActivityList'
-import { useState } from 'react'
-import RotatingBackground from './components/RotatingBackground'
+import './App.css';
+import Header from './components/Header';
+import ActivityForm from './components/activities/ActivityForm';
+import ActivityList from './components/activities/ActivityList';
+import { useState } from 'react';
+import RotatingBackground from './components/RotatingBackground';
 import WeatherAPI from './components/WeatherAPI';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -52,9 +53,9 @@ function App() {
           <ActivityForm addActivity={addActivity} />
           <ActivityList activities={activities} deleteActivity={deleteActivity} editActivity={editActivity}/>
         </main>
-      
+     
     </>
   );
 }
 
-export default App
+export default App;

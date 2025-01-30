@@ -3,9 +3,9 @@ import imageOne from '../assets/beach-trip.jpg';
 import imageThree from '../assets/old-trip.jpg';
 import imageFour from '../assets/ski-trip.jpg';
 
-const [currentIndex, setCurrentIndex] = useState(0);
-
 const RotatingBackground  = ({children}) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
     const images = [
         `url(${imageOne})`,
         `url(${imageThree})`,
